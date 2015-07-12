@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var statusLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Konashi.initialize()
 
+        Konashi.addObserver(self, selector:"connecting", name: KonashiEventConnectingNotification)
+        Konashi.addObserver(self, selector:"connected", name: KonashiEventConnectedNotification)
         // readyじゃなくてconnectedのタイミングで来てるっぽい
         Konashi.addObserver(self, selector:"ready", name: KonashiEventReadyToUseNotification)
 
@@ -37,8 +41,16 @@ class ViewController: UIViewController {
         Konashi.find()
     }
 
-    @IBAction func readButtonClicked(sender: AnyObject) {
-        print("Connected to Konashi \(Konashi.softwareRevisionString())");
+    @IBAction func checkButtonClicked(sender: AnyObject) {
+        if Konashi.isReady() {
+            statusLabel.text = "Ready";
+            print("Konashi: \(Konashi.softwareRevisionString())");
+        } else {
+            statusLabel.text = "Not ready";
+        }
+    }
+
+    @IBAction func doButtonClicked(sender: AnyObject) {
         blinkLed()
 //        print("clicked")
 //        if Konashi.isConnected() {
@@ -51,10 +63,21 @@ class ViewController: UIViewController {
 //        }
     }
 
+    internal func connecting() {
+        print("connecting")
+    }
+
+    internal func connected() {
+        print("connected")
+    }
+
     internal func ready() {
         print("ready")
         if Konashi.isConnected() {
             print("Connected to Konashi \(Konashi.softwareRevisionString())");
+        }
+        if Konashi.isReady() {
+            print("Ready to use Konashi")
         }
     }
 
