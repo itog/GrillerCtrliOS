@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02630DABCCA65C44AD94E99D /* libPods.a */; };
 		514835E91B52179E00776718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835E81B52179E00776718 /* AppDelegate.swift */; };
 		514835EB1B52179E00776718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835EA1B52179E00776718 /* ViewController.swift */; };
 		514835EE1B52179E00776718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835EC1B52179E00776718 /* Main.storyboard */; };
 		514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 514835EF1B52179E00776718 /* KonashiTest.xcdatamodeld */; };
 		514835F31B52179E00776718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514835F21B52179E00776718 /* Assets.xcassets */; };
 		514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835F41B52179E00776718 /* LaunchScreen.storyboard */; };
+		514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514835FF1B521A2900776718 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02630DABCCA65C44AD94E99D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		514835E51B52179E00776718 /* KonashiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonashiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514835E81B52179E00776718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514835EA1B52179E00776718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,10 @@
 		514835F21B52179E00776718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		514835F51B52179E00776718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		514835F71B52179E00776718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514835FF1B521A2900776718 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KonashiTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */,
+				470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10952D610861CC5E97C84D9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */,
+				7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49477B9FA6A81902D2341F8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02630DABCCA65C44AD94E99D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		514835DC1B52179E00776718 = {
 			isa = PBXGroup;
 			children = (
+				514835FF1B521A2900776718 /* CoreBluetooth.framework */,
 				514835E71B52179E00776718 /* KonashiTest */,
 				514835E61B52179E00776718 /* Products */,
+				51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */,
+				10952D610861CC5E97C84D9B /* Pods */,
+				49477B9FA6A81902D2341F8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "KonashiTest" */;
 			buildPhases = (
+				26F80740A47738F4BB7EE5FB /* Check Pods Manifest.lock */,
 				514835E11B52179E00776718 /* Sources */,
 				514835E21B52179E00776718 /* Frameworks */,
 				514835E31B52179E00776718 /* Resources */,
+				FDD58898AC8590154232E7F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -93,11 +125,13 @@
 		514835DD1B52179E00776718 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = pigmal;
 				TargetAttributes = {
 					514835E41B52179E00776718 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BAZJ9J5XD8;
 					};
 				};
 			};
@@ -131,6 +165,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26F80740A47738F4BB7EE5FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD58898AC8590154232E7F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		514835E11B52179E00776718 /* Sources */ = {
@@ -248,23 +315,38 @@
 		};
 		514835FB1B52179E00776718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KonashiTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.KonashiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		514835FC1B52179E00776718 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KonashiTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.KonashiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -287,6 +369,7 @@
 				514835FC1B52179E00776718 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
