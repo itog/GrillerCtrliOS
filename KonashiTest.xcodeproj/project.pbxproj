@@ -16,6 +16,12 @@
 		514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835F41B52179E00776718 /* LaunchScreen.storyboard */; };
 		514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514835FF1B521A2900776718 /* CoreBluetooth.framework */; };
 		51AAA10B1B5347A200642072 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA10A1B5347A200642072 /* BluetoothViewController.swift */; };
+		51BCE9971B53988F004637E1 /* PeripheralListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */; };
+		51BCE99A1B539B46004637E1 /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BCE9981B539B46004637E1 /* Bluetooth.storyboard */; };
+		51BCE9A01B53AD5E004637E1 /* Bluetooth1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */; };
+		51BCE9A21B53ADB4004637E1 /* Bluetooth2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */; };
+		51BCE9A41B53ADF9004637E1 /* Bluetooth3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */; };
+		51BCE9A61B53AE70004637E1 /* Bluetooth4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		514835FF1B521A2900776718 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KonashiTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		51AAA10A1B5347A200642072 /* BluetoothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
+		51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralListTableViewController.swift; sourceTree = "<group>"; };
+		51BCE9991B539B46004637E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Bluetooth.storyboard; sourceTree = "<group>"; };
+		51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth1ViewController.swift; sourceTree = "<group>"; };
+		51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth2ViewController.swift; sourceTree = "<group>"; };
+		51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth3ViewController.swift; sourceTree = "<group>"; };
+		51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth4ViewController.swift; sourceTree = "<group>"; };
 		7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,12 +102,18 @@
 			children = (
 				51AAA10A1B5347A200642072 /* BluetoothViewController.swift */,
 				514835E81B52179E00776718 /* AppDelegate.swift */,
-				514835EA1B52179E00776718 /* ViewController.swift */,
 				514835EC1B52179E00776718 /* Main.storyboard */,
+				514835EA1B52179E00776718 /* ViewController.swift */,
 				514835F21B52179E00776718 /* Assets.xcassets */,
 				514835F41B52179E00776718 /* LaunchScreen.storyboard */,
 				514835F71B52179E00776718 /* Info.plist */,
 				514835EF1B52179E00776718 /* KonashiTest.xcdatamodeld */,
+				51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */,
+				51BCE9981B539B46004637E1 /* Bluetooth.storyboard */,
+				51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */,
+				51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */,
+				51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */,
+				51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */,
 			);
 			path = KonashiTest;
 			sourceTree = "<group>";
@@ -162,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */,
+				51BCE99A1B539B46004637E1 /* Bluetooth.storyboard in Resources */,
 				514835F31B52179E00776718 /* Assets.xcassets in Resources */,
 				514835EE1B52179E00776718 /* Main.storyboard in Resources */,
 			);
@@ -207,10 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BCE9A61B53AE70004637E1 /* Bluetooth4ViewController.swift in Sources */,
 				514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */,
+				51BCE9A41B53ADF9004637E1 /* Bluetooth3ViewController.swift in Sources */,
 				51AAA10B1B5347A200642072 /* BluetoothViewController.swift in Sources */,
 				514835EB1B52179E00776718 /* ViewController.swift in Sources */,
+				51BCE9A01B53AD5E004637E1 /* Bluetooth1ViewController.swift in Sources */,
 				514835E91B52179E00776718 /* AppDelegate.swift in Sources */,
+				51BCE9A21B53ADB4004637E1 /* Bluetooth2ViewController.swift in Sources */,
+				51BCE9971B53988F004637E1 /* PeripheralListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +255,14 @@
 				514835F51B52179E00776718 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		51BCE9981B539B46004637E1 /* Bluetooth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51BCE9991B539B46004637E1 /* Base */,
+			);
+			name = Bluetooth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

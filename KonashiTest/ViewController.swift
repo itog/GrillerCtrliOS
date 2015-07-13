@@ -63,11 +63,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openButtonClicked(sender: AnyObject) {
-//        let bluetoothViewController = BluetoothViewController.new()
-////        bluetoothViewController.setMainLabel("hello world")
-//        self.navigationController?.pushViewController(bluetoothViewController, animated: true)
-        
-        self.performSegueWithIdentifier("pushBt", sender: self)
+        let bluetoothViewController = Bluetooth1ViewController.new()
+        self.navigationController?.pushViewController(bluetoothViewController, animated: true)
+
+//        let storyboard = UIStoryboard(name: "Bluetooth", bundle: nil)
+//        let vc = storyboard.instantiateInitialViewController() as! BluetoothViewController
+//        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     internal func connecting() {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lQp-4C-oyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+    </dependencies>
+    <scenes>
+        <!--Bluetooth View Controller-->
+        <scene sceneID="sD6-FI-aEx">
+            <objects>
+                <viewController id="lQp-4C-oyx" customClass="BluetoothViewController" customModule="KonashiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wrC-mk-u4i"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZT5-ae-VOf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qbu-uQ-Qu8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAG-a2-VuP">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-jN-vpO">
+                                        <rect key="frame" x="260" y="6" width="80" height="30"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="searchButtonClicked:" destination="lQp-4C-oyx" eventType="touchUpInside" id="oYq-d4-dUn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hXR-jN-vpO" secondAttribute="bottom" constant="7" id="1jJ-VD-ut1"/>
+                                    <constraint firstItem="hXR-jN-vpO" firstAttribute="top" secondItem="ZAG-a2-VuP" secondAttribute="top" constant="7" id="3Br-k1-WQb"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXR-jN-vpO" secondAttribute="trailing" constant="8" id="JZk-wv-cqR"/>
+                                    <constraint firstAttribute="height" constant="44" id="UAU-5j-Wm7"/>
+                                    <constraint firstItem="hXR-jN-vpO" firstAttribute="leading" secondItem="ZAG-a2-VuP" secondAttribute="leading" constant="8" id="lFY-hC-qT4"/>
+                                    <constraint firstItem="hXR-jN-vpO" firstAttribute="centerX" secondItem="ZAG-a2-VuP" secondAttribute="centerX" id="rgz-Xk-RNc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-zt-smG">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZk-6Q-hrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21" y="220"/>
+        </scene>
+    </scenes>
+</document>

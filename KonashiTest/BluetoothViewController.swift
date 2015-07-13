@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BluetoothViewController: UIViewController {
+class BluetoothViewController: UIViewController, CBCentralManagerDelegate {
+    var myCentralManager: CBCentralManager!
 
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blueColor()
 
         // Do any additional setup after loading the view.
         print("loaded BluetoothViewController")
@@ -26,6 +26,37 @@ class BluetoothViewController: UIViewController {
     
     func setMainLabel(text:String) {
 //        label.text = text
+    }
+
+    func centralManagerDidUpdateState(central: CBCentralManager) {
+        print("state \(central.state)");
+        switch (central.state) {
+        case .PoweredOff:
+            print("Bluetoothの電源がOff")
+        case .PoweredOn:
+            print("Bluetoothの電源はOn")
+            // BLEデバイスの検出を開始.
+            myCentralManager.scanForPeripheralsWithServices(nil, options: nil)
+        case .Resetting:
+            print("レスティング状態")
+        case .Unauthorized:
+            print("非認証状態")
+        case .Unknown:
+            print("不明")
+        case .Unsupported:
+            print("非対応")
+        }
+    }
+
+    func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+        print("pheripheral.name: \(peripheral.name)")
+        print("advertisementData:\(advertisementData)")
+        print("RSSI: \(RSSI)")
+        print("peripheral.identifier.UUIDString: \(peripheral.identifier.UUIDString)")
+    }
+
+    @IBAction func searchButtonClicked(sender: AnyObject) {
+        myCentralManager = CBCentralManager(delegate: self, queue: nil, options: nil)
     }
 
     /*
