@@ -15,6 +15,7 @@
 		514835F31B52179E00776718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514835F21B52179E00776718 /* Assets.xcassets */; };
 		514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835F41B52179E00776718 /* LaunchScreen.storyboard */; };
 		514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514835FF1B521A2900776718 /* CoreBluetooth.framework */; };
+		51AAA10B1B5347A200642072 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA10A1B5347A200642072 /* BluetoothViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		514835F71B52179E00776718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514835FF1B521A2900776718 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KonashiTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		51AAA10A1B5347A200642072 /* BluetoothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 		514835E71B52179E00776718 /* KonashiTest */ = {
 			isa = PBXGroup;
 			children = (
+				51AAA10A1B5347A200642072 /* BluetoothViewController.swift */,
 				514835E81B52179E00776718 /* AppDelegate.swift */,
 				514835EA1B52179E00776718 /* ViewController.swift */,
 				514835EC1B52179E00776718 /* Main.storyboard */,
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */,
+				51AAA10B1B5347A200642072 /* BluetoothViewController.swift in Sources */,
 				514835EB1B52179E00776718 /* ViewController.swift in Sources */,
 				514835E91B52179E00776718 /* AppDelegate.swift in Sources */,
 			);

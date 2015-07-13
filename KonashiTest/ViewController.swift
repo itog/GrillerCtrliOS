@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Konashi.initialize()
+//        Konashi.initialize()
 
-        Konashi.addObserver(self, selector:"connecting", name: KonashiEventConnectingNotification)
-        Konashi.addObserver(self, selector:"connected", name: KonashiEventConnectedNotification)
-        // readyじゃなくてconnectedのタイミングで来てるっぽい
+//        Konashi.addObserver(self, selector:"connecting", name: KonashiEventConnectingNotification)
+//        Konashi.addObserver(self, selector:"connected", name: KonashiEventConnectedNotification)
+//        // readyじゃなくてconnectedのタイミングで来てるっぽい
         Konashi.addObserver(self, selector:"ready", name: KonashiEventReadyToUseNotification)
-
+        
         //イベント来ない
         Konashi.shared().connectedHandler = {() -> Void in
             print("Connected to Konashi \(Konashi.softwareRevisionString())");
@@ -31,13 +31,21 @@ class ViewController: UIViewController {
         }
     }
 
+    func checkKonashi() {
+        print("checking if Konashi is connected")
+        if Konashi.isReady() {
+            self.statusLabel.text = "Ready";
+        } else {
+            NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkKonashi", userInfo: nil, repeats: false)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func buttonClicked(sender: AnyObject) {
-        print("hello swift");
+        Konashi.reset()
         Konashi.find()
     }
 
@@ -52,15 +60,14 @@ class ViewController: UIViewController {
 
     @IBAction func doButtonClicked(sender: AnyObject) {
         blinkLed()
-//        print("clicked")
-//        if Konashi.isConnected() {
-//            let value = Konashi.digitalRead(KonashiDigitalIOPin.DigitalIO0);
-//            print ("level = \(value)")
-//            
-//            Konashi.digitalWrite(KonashiDigitalIOPin.LED2, value: KonashiLevel.High)
-//            Konashi.digitalWrite(KonashiDigitalIOPin.LED3, value: KonashiLevel.High)
-//            Konashi.digitalWrite(KonashiDigitalIOPin.LED4, value: KonashiLevel.High)
-//        }
+    }
+
+    @IBAction func openButtonClicked(sender: AnyObject) {
+//        let bluetoothViewController = BluetoothViewController.new()
+////        bluetoothViewController.setMainLabel("hello world")
+//        self.navigationController?.pushViewController(bluetoothViewController, animated: true)
+        
+        self.performSegueWithIdentifier("pushBt", sender: self)
     }
 
     internal func connecting() {
@@ -72,13 +79,7 @@ class ViewController: UIViewController {
     }
 
     internal func ready() {
-        print("ready")
-        if Konashi.isConnected() {
-            print("Connected to Konashi \(Konashi.softwareRevisionString())");
-        }
-        if Konashi.isReady() {
-            print("Ready to use Konashi")
-        }
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkKonashi", userInfo: nil, repeats: false)
     }
 
     func initPins() {
