@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQu-T1-XiC">
-                                <rect key="frame" x="255" y="410" width="90" height="30"/>
+                                <rect key="frame" x="255" y="411" width="90" height="30"/>
                                 <state key="normal" title="Blink LED"/>
                                 <connections>
                                     <action selector="doButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gkf-lD-ggd"/>
@@ -45,8 +45,15 @@
                                     <action selector="checkButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqc-cm-9bp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q3-2L-eqZ">
+                                <rect key="frame" x="277" y="449" width="46" height="30"/>
+                                <state key="normal" title="I2C"/>
+                                <connections>
+                                    <action selector="i2cButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRX-ro-bn0"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-JH-kjO">
-                                <rect key="frame" x="277" y="453" width="46" height="30"/>
+                                <rect key="frame" x="277" y="515" width="46" height="30"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
                                     <action selector="openButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwB-91-OrP"/>
@@ -61,6 +68,7 @@
                             <constraint firstItem="9K9-vF-1Bh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLC-Nw-NzP"/>
                             <constraint firstItem="YYk-VO-WDr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYN-K7-zrw"/>
                             <constraint firstItem="nQu-T1-XiC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNf-Vg-0G6"/>
+                            <constraint firstItem="3Q3-2L-eqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFM-uY-728"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ytp-oK-cxk"/>

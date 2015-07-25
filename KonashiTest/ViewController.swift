@@ -62,6 +62,11 @@ class ViewController: UIViewController {
         blinkLed()
     }
 
+    @IBAction func i2cButtonClicked(sender: AnyObject) {
+        let data:[UInt8] = [0xff, 0x01, 0xff, 0x00, 0xff];
+        sendI2C(data, address: 0x04)
+    }
+
     @IBAction func openButtonClicked(sender: AnyObject) {
         let bluetoothViewController = Bluetooth1ViewController.new()
         self.navigationController?.pushViewController(bluetoothViewController, animated: true)
@@ -96,5 +101,21 @@ class ViewController: UIViewController {
         Konashi.pwmDuty(KonashiDigitalIOPin.LED2, duty:500000)       // 0.5s
         Konashi.pwmMode(KonashiDigitalIOPin.LED2, mode:KonashiPWMMode.Enable)
     }
+
+    func sendI2C(data:[UInt8], address: UInt8) {
+        let size = data.count
+        let dataPointer = UnsafeMutablePointer<UInt8>.alloc(size)
+        for i in 0..<size {
+            dataPointer[i] = data[i]
+        }
+
+        Konashi.i2cMode(KonashiI2CMode.Enable400K)
+        Konashi.i2cStartCondition()
+        Konashi.i2cWrite(Int32(size), data: dataPointer, address: address)
+        NSThread.sleepForTimeInterval(0.01)
+        Konashi.i2cStopCondition()
+        NSThread.sleepForTimeInterval(0.02)
+    }
+
 }
 
