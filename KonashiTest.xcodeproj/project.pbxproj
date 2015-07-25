@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02630DABCCA65C44AD94E99D /* libPods.a */; };
+		513CEED91B6343B900D631F3 /* LedSequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CEED81B6343B900D631F3 /* LedSequencerViewController.swift */; };
 		514835E91B52179E00776718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835E81B52179E00776718 /* AppDelegate.swift */; };
 		514835EB1B52179E00776718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835EA1B52179E00776718 /* ViewController.swift */; };
 		514835EE1B52179E00776718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835EC1B52179E00776718 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		02630DABCCA65C44AD94E99D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		513CEED81B6343B900D631F3 /* LedSequencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedSequencerViewController.swift; sourceTree = "<group>"; };
 		514835E51B52179E00776718 /* KonashiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonashiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514835E81B52179E00776718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514835EA1B52179E00776718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				51AAA10A1B5347A200642072 /* BluetoothViewController.swift */,
 				514835E81B52179E00776718 /* AppDelegate.swift */,
 				514835EC1B52179E00776718 /* Main.storyboard */,
+				513CEED81B6343B900D631F3 /* LedSequencerViewController.swift */,
 				514835EA1B52179E00776718 /* ViewController.swift */,
 				514835F21B52179E00776718 /* Assets.xcassets */,
 				514835F41B52179E00776718 /* LaunchScreen.storyboard */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513CEED91B6343B900D631F3 /* LedSequencerViewController.swift in Sources */,
 				51BCE9A61B53AE70004637E1 /* Bluetooth4ViewController.swift in Sources */,
 				514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */,
 				51BCE9A41B53ADF9004637E1 /* Bluetooth3ViewController.swift in Sources */,

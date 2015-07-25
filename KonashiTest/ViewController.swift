@@ -49,22 +49,24 @@ class ViewController: UIViewController {
         Konashi.find()
     }
 
-    @IBAction func checkButtonClicked(sender: AnyObject) {
-        if Konashi.isReady() {
-            statusLabel.text = "Ready";
-            print("Konashi: \(Konashi.softwareRevisionString())");
-        } else {
-            statusLabel.text = "Not ready";
-        }
-    }
-
     @IBAction func doButtonClicked(sender: AnyObject) {
         blinkLed()
     }
 
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+
     @IBAction func i2cButtonClicked(sender: AnyObject) {
-        let data:[UInt8] = [0xff, 0x01, 0xff, 0x00, 0xff];
+//        let data:[UInt8] = [0xff, 0x01, 0xff, 0x00, 0xff];
+
+        let data:[UInt8] = [0xff, 0x01, UInt8(redSlider.value), UInt8(greenSlider.value), UInt8(blueSlider.value)];
         sendI2C(data, address: 0x04)
+    }
+
+    @IBAction func openSequencerClicked(sender: AnyObject) {
+        let vc = LedSequencerViewController.new()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func openButtonClicked(sender: AnyObject) {

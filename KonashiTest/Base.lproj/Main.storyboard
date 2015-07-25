@@ -18,31 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not ready" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-VO-WDr">
-                                <rect key="frame" x="258" y="289" width="84" height="21"/>
+                                <rect key="frame" x="255" y="119" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQu-T1-XiC">
-                                <rect key="frame" x="255" y="411" width="90" height="30"/>
-                                <state key="normal" title="Blink LED"/>
-                                <connections>
-                                    <action selector="doButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gkf-lD-ggd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdo-U7-t6E">
-                                <rect key="frame" x="256" y="318" width="88" height="30"/>
+                                <rect key="frame" x="256" y="165" width="88" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuC-mL-NJX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-vF-1Bh">
-                                <rect key="frame" x="277" y="365" width="46" height="30"/>
-                                <state key="normal" title="Check"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-JH-kjO">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Open"/>
                                 <connections>
-                                    <action selector="checkButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqc-cm-9bp"/>
+                                    <action selector="openButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwB-91-OrP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q3-2L-eqZ">
@@ -52,33 +45,55 @@
                                     <action selector="i2cButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRX-ro-bn0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-JH-kjO">
-                                <rect key="frame" x="277" y="515" width="46" height="30"/>
-                                <state key="normal" title="Open"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQu-T1-XiC">
+                                <rect key="frame" x="252" y="203" width="90" height="30"/>
+                                <state key="normal" title="Blink LED"/>
                                 <connections>
-                                    <action selector="openButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwB-91-OrP"/>
+                                    <action selector="doButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gkf-lD-ggd"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="BPS-Dt-JGL">
+                                <rect key="frame" x="238" y="286" width="118" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-AD-MCR">
+                                <rect key="frame" x="241" y="323" width="118" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-Aq-aTJ">
+                                <rect key="frame" x="238" y="360" width="118" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-b7-wHX">
+                                <rect key="frame" x="239" y="518" width="116" height="30"/>
+                                <state key="normal" title="Open Sequencer"/>
+                                <connections>
+                                    <action selector="openSequencerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGp-mo-ifY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vhI-Aq-aTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25N-BJ-IOa"/>
                             <constraint firstItem="YYk-VO-WDr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="45U-MX-qYb"/>
                             <constraint firstItem="mdo-U7-t6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hM-nY-k3u"/>
+                            <constraint firstItem="BPS-Dt-JGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CR2-E9-JdP"/>
+                            <constraint firstItem="ktg-b7-wHX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G9h-Bw-oo3"/>
                             <constraint firstItem="pxv-JH-kjO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jpj-q2-2nb"/>
-                            <constraint firstItem="9K9-vF-1Bh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLC-Nw-NzP"/>
                             <constraint firstItem="YYk-VO-WDr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYN-K7-zrw"/>
                             <constraint firstItem="nQu-T1-XiC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNf-Vg-0G6"/>
+                            <constraint firstItem="Q67-AD-MCR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tq3-OJ-ZsS"/>
                             <constraint firstItem="3Q3-2L-eqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFM-uY-728"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ytp-oK-cxk"/>
                     <connections>
+                        <outlet property="blueSlider" destination="vhI-Aq-aTJ" id="3vJ-ha-XFv"/>
+                        <outlet property="greenSlider" destination="Q67-AD-MCR" id="Io8-51-Hol"/>
+                        <outlet property="redSlider" destination="BPS-Dt-JGL" id="tgx-YL-jrS"/>
                         <outlet property="statusLabel" destination="YYk-VO-WDr" id="41r-ch-79x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="180"/>
+            <point key="canvasLocation" x="726" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4fD-bk-yyS">
