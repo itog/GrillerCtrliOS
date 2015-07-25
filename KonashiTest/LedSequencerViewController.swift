@@ -24,7 +24,19 @@ class LedSequencerViewController: UIViewController {
             btn.tag = i
 
             btn.frame = CGRectMake(CGFloat(buttonWidth*(i%4) + 5), CGFloat(100+i/4*50), CGFloat(buttonWidth) - 10, 40)
-            btn.backgroundColor = UIColor.blackColor()
+            switch i % 4 {
+            case 0:
+                btn.backgroundColor = UIColor(colorLiteralRed: 0xff, green: 0, blue: 0, alpha: 1)
+
+            case 1:
+                btn.backgroundColor = UIColor(colorLiteralRed: 0, green: 0xff, blue: 0, alpha: 1)
+
+            case 2:
+                btn.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0xff, alpha: 1)
+
+            default:
+                btn.backgroundColor = UIColor(colorLiteralRed: 0xff, green: 0xff, blue: 0xff, alpha: 1)
+            }
             btn.layer.cornerRadius = 10.0
             btn.layer.borderWidth = 2;
             btn.setTitle("button", forState: UIControlState.Normal)
@@ -107,10 +119,30 @@ class LedSequencerViewController: UIViewController {
     }
 
     func runClicked(sender:UIButton) {
+        sender.enabled = false
         for btn in buttons {
             let c = CIColor(color:btn.backgroundColor!)
-            print("color = \(c.red) \(c.green) \(c.blue)")
-            NSThread.sleepForTimeInterval(0.5)
+            print("id: \(btn.tag), color: \(c.red) \(c.green) \(c.blue)")
+            NSThread.sleepForTimeInterval(1.0)
+
+            let data:[UInt8] = [0xff, 0x01, UInt8(c.red*255), UInt8(c.green*255), UInt8(c.blue*255)];
+            sendI2C(data, address: 0x04)
         }
+        sender.enabled = true
+    }
+
+    func sendI2C(data:[UInt8], address: UInt8) {
+        let size = data.count
+        let dataPointer = UnsafeMutablePointer<UInt8>.alloc(size)
+        for i in 0..<size {
+            dataPointer[i] = data[i]
+        }
+
+        Konashi.i2cMode(KonashiI2CMode.Enable400K)
+        Konashi.i2cStartCondition()
+        Konashi.i2cWrite(Int32(size), data: dataPointer, address: address)
+        NSThread.sleepForTimeInterval(0.01)
+        Konashi.i2cStopCondition()
+        NSThread.sleepForTimeInterval(0.02)
     }
 }

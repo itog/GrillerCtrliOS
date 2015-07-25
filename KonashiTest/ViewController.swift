@@ -118,6 +118,5 @@ class ViewController: UIViewController {
         Konashi.i2cStopCondition()
         NSThread.sleepForTimeInterval(0.02)
     }
-
 }
 
