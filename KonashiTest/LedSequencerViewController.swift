@@ -13,6 +13,9 @@ class LedSequencerViewController: UIViewController {
     let NUM_BUTTONS = 16
     var buttons:[UIButton] = []
     var selected = 0
+    var redSlider:UISlider! = nil
+    var greenSlider:UISlider! = nil
+    var blueSlider:UISlider! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +48,8 @@ class LedSequencerViewController: UIViewController {
             self.view.addSubview(btn)
         }
 
-        let redSlider = UISlider(frame:CGRectMake(20, 400, 280, 20))
+        let SLIDER_Y:CGFloat = 320;
+        redSlider = UISlider(frame:CGRectMake(20, SLIDER_Y, 280, 20))
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
         redSlider.continuous = true
@@ -54,7 +58,7 @@ class LedSequencerViewController: UIViewController {
         redSlider.addTarget(self, action: "redValueDidChange:", forControlEvents: .ValueChanged)
         self.view.addSubview(redSlider)
 
-        let greenSlider = UISlider(frame:CGRectMake(20, 430, 280, 20))
+        greenSlider = UISlider(frame:CGRectMake(20, SLIDER_Y + 40, 280, 20))
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
         greenSlider.continuous = true
@@ -63,7 +67,7 @@ class LedSequencerViewController: UIViewController {
         greenSlider.addTarget(self, action: "greenValueDidChange:", forControlEvents: .ValueChanged)
         self.view.addSubview(greenSlider)
 
-        let blueSlider = UISlider(frame:CGRectMake(20, 460, 280, 20))
+        blueSlider = UISlider(frame:CGRectMake(20, SLIDER_Y + 80, 280, 20))
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
         blueSlider.continuous = true
@@ -73,13 +77,13 @@ class LedSequencerViewController: UIViewController {
         self.view.addSubview(blueSlider)
 
         let btn = UIButton()
-        btn.frame = CGRectMake(CGFloat(buttonWidth*2 + 5), 500, 200, 40)
+        btn.frame = CGRectMake(0, 0, 200, 40)
         btn.backgroundColor = UIColor.redColor()
         btn.layer.cornerRadius = 10.0
         btn.layer.borderWidth = 2;
+        btn.layer.position = CGPoint(x: self.view.frame.width/2, y:self.view.frame.height-50)
         btn.setTitle("Run", forState: UIControlState.Normal)
         btn.addTarget(self, action: "runClicked:", forControlEvents: .TouchUpInside)
-        buttons.append(btn)
         self.view.addSubview(btn)
     }
 
@@ -91,6 +95,7 @@ class LedSequencerViewController: UIViewController {
     func buttonClicked(sender:UIButton) {
         print("buttonClickd \(sender.tag)")
         selected = sender.tag
+        sender.backgroundColor = UIColor(red:CGFloat(redSlider.value/255), green:CGFloat(greenSlider.value/255), blue:CGFloat(blueSlider.value/255), alpha:CGFloat(1))
     }
 
     /*
