@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02630DABCCA65C44AD94E99D /* libPods.a */; };
 		513CEED91B6343B900D631F3 /* LedSequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CEED81B6343B900D631F3 /* LedSequencerViewController.swift */; };
+		513DC3801B6B1673001365FA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DC37F1B6B1673001365FA /* AudioToolbox.framework */; };
+		513DC3821B6B3772001365FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DC3811B6B3772001365FA /* AVFoundation.framework */; };
+		513DC3881B6B410D001365FA /* se_maoudamashii_system46.wav in Resources */ = {isa = PBXBuildFile; fileRef = 513DC3871B6B410D001365FA /* se_maoudamashii_system46.wav */; };
 		514835E91B52179E00776718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835E81B52179E00776718 /* AppDelegate.swift */; };
 		514835EB1B52179E00776718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835EA1B52179E00776718 /* ViewController.swift */; };
 		514835EE1B52179E00776718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835EC1B52179E00776718 /* Main.storyboard */; };
@@ -28,6 +31,10 @@
 /* Begin PBXFileReference section */
 		02630DABCCA65C44AD94E99D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		513CEED81B6343B900D631F3 /* LedSequencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedSequencerViewController.swift; sourceTree = "<group>"; };
+		513DC37D1B6B164C001365FA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		513DC37F1B6B1673001365FA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		513DC3811B6B3772001365FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		513DC3871B6B410D001365FA /* se_maoudamashii_system46.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = se_maoudamashii_system46.wav; sourceTree = "<group>"; };
 		514835E51B52179E00776718 /* KonashiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonashiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514835E81B52179E00776718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514835EA1B52179E00776718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513DC3821B6B3772001365FA /* AVFoundation.framework in Frameworks */,
+				513DC3801B6B1673001365FA /* AudioToolbox.framework in Frameworks */,
 				514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */,
 				470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */,
 			);
@@ -74,6 +83,9 @@
 		49477B9FA6A81902D2341F8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				513DC3811B6B3772001365FA /* AVFoundation.framework */,
+				513DC37F1B6B1673001365FA /* AudioToolbox.framework */,
+				513DC37D1B6B164C001365FA /* CoreAudio.framework */,
 				02630DABCCA65C44AD94E99D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -102,6 +114,7 @@
 		514835E71B52179E00776718 /* KonashiTest */ = {
 			isa = PBXGroup;
 			children = (
+				513DC3871B6B410D001365FA /* se_maoudamashii_system46.wav */,
 				51AAA10A1B5347A200642072 /* BluetoothViewController.swift */,
 				514835E81B52179E00776718 /* AppDelegate.swift */,
 				514835EC1B52179E00776718 /* Main.storyboard */,
@@ -183,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */,
+				513DC3881B6B410D001365FA /* se_maoudamashii_system46.wav in Resources */,
 				51BCE99A1B539B46004637E1 /* Bluetooth.storyboard in Resources */,
 				514835F31B52179E00776718 /* Assets.xcassets in Resources */,
 				514835EE1B52179E00776718 /* Main.storyboard in Resources */,
