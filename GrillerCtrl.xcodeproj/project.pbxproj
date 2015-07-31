@@ -15,7 +15,6 @@
 		513DC3CB1B6B7C2A001365FA /* Bluetooth1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */; };
 		513DC3CC1B6B7C2A001365FA /* Bluetooth2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */; };
 		513DC3CD1B6B7C2A001365FA /* Bluetooth3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */; };
-		513DC3CE1B6B7C2A001365FA /* Bluetooth4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth1ViewController.swift; sourceTree = "<group>"; };
 		513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth2ViewController.swift; sourceTree = "<group>"; };
 		513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth3ViewController.swift; sourceTree = "<group>"; };
-		513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */,
 				513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */,
 				513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */,
-				513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */,
 				513DC3B51B6B7BE4001365FA /* ViewController.swift */,
 				513DC3B71B6B7BE4001365FA /* Main.storyboard */,
 				513DC3BA1B6B7BE4001365FA /* Assets.xcassets */,
@@ -146,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				513DC3CE1B6B7C2A001365FA /* Bluetooth4ViewController.swift in Sources */,
 				513DC3CC1B6B7C2A001365FA /* Bluetooth2ViewController.swift in Sources */,
 				513DC3CB1B6B7C2A001365FA /* Bluetooth1ViewController.swift in Sources */,
 				513DC3CD1B6B7C2A001365FA /* Bluetooth3ViewController.swift in Sources */,
@@ -263,6 +259,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GrillerCtrl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griller..GrillerCtrl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +271,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GrillerCtrl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griller..GrillerCtrl;
 				PRODUCT_NAME = "$(TARGET_NAME)";

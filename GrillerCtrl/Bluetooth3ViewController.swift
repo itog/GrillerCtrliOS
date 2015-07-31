@@ -10,19 +10,20 @@ class Bluetooth3ViewController: UIViewController, UITableViewDelegate, UITableVi
     var myTableView: UITableView!
     var myCharacteristicsUuids: NSMutableArray = NSMutableArray()
     var myCharacteristics: NSMutableArray = NSMutableArray()
-    var myWriteButton: UIButton!
-    var myReadButton: UIButton!
-    var myInvokeButton: UIButton!
     var myTargetPeriperal: CBPeripheral!
     var myService: CBService!
-    var myTextField: UITextField!
     var myTargetCharacteristics: CBCharacteristic!
-    
+    var stopButton: UIButton!
+    var rotate1Button: UIButton!
+    var rotate2Button: UIButton!
+    var rotate3Button: UIButton!
+    var rotate4Button: UIButton!
+
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
@@ -41,48 +42,59 @@ class Bluetooth3ViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // Viewに追加する.
         self.view.addSubview(myTableView)
-        
-        // 文字列を表示
-        myTextField = UITextField(frame: CGRectMake(25,displayHeight/2 + 10,displayWidth-50,30))
-        myTextField.delegate = self
-        myTextField.borderStyle = UITextBorderStyle.RoundedRect
-        self.view.addSubview(myTextField)
-        
-        // Readボタン.
-        myReadButton = UIButton()
-        myReadButton.frame = CGRectMake(displayWidth/2 + 60 - 100/2,displayHeight/2 + 100,100,40)
-        myReadButton.backgroundColor = UIColor.redColor()
-        myReadButton.layer.masksToBounds = true
-        myReadButton.setTitle("Read", forState: UIControlState.Normal)
-        myReadButton.layer.cornerRadius = 20.0
-        myReadButton.tag = 1
-        myReadButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(myReadButton)
-        
-        // Writeボタン.
-        myWriteButton = UIButton()
-        myWriteButton.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 100,100,40)
-        myWriteButton.backgroundColor = UIColor.greenColor()
-        myWriteButton.layer.masksToBounds = true
-        myWriteButton.setTitle("Write", forState: UIControlState.Normal)
-        myWriteButton.layer.cornerRadius = 20.0
-        myWriteButton.tag = 2
-        myWriteButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(myWriteButton)
-        
-        // Invokeボタン.
-        myInvokeButton = UIButton()
-        myInvokeButton.frame = CGRectMake(displayWidth/2 - 200/2,displayHeight - 100,200,40)
-        myInvokeButton.backgroundColor = UIColor.blackColor()
-        myInvokeButton.layer.masksToBounds = true
-        myInvokeButton.setTitle("Invoke App", forState: UIControlState.Normal)
-        myInvokeButton.layer.cornerRadius = 20.0
-        myInvokeButton.tag = 3
-        myInvokeButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(myInvokeButton)
-        
+
+        // tagはそのまま送信データに使う
+        stopButton = UIButton()
+        stopButton.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 10,100,40)
+        stopButton.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.3, alpha: 1)
+        stopButton.layer.masksToBounds = true
+        stopButton.setTitle("Stop", forState: UIControlState.Normal)
+        stopButton.layer.cornerRadius = 20.0
+        stopButton.tag = 0
+        stopButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(stopButton)
+
+        rotate1Button = UIButton()
+        rotate1Button.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 60,100,40)
+        rotate1Button.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.3, alpha: 1)
+        rotate1Button.layer.masksToBounds = true
+        rotate1Button.setTitle("Rotate 1", forState: UIControlState.Normal)
+        rotate1Button.layer.cornerRadius = 20.0
+        rotate1Button.tag = 2
+        rotate1Button.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(rotate1Button)
+
+        rotate2Button = UIButton()
+        rotate2Button.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 110,100,40)
+        rotate2Button.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.3, alpha: 1)
+        rotate2Button.layer.masksToBounds = true
+        rotate2Button.setTitle("Rotate 2", forState: UIControlState.Normal)
+        rotate2Button.layer.cornerRadius = 20.0
+        rotate2Button.tag = 3
+        rotate2Button.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(rotate2Button)
+
+        rotate3Button = UIButton()
+        rotate3Button.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 160,100,40)
+        rotate3Button.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.3, alpha: 1)
+        rotate3Button.layer.masksToBounds = true
+        rotate3Button.setTitle("Rotate ", forState: UIControlState.Normal)
+        rotate3Button.layer.cornerRadius = 20.0
+        rotate3Button.tag = 4
+        rotate3Button.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(rotate3Button)
+
+        rotate4Button = UIButton()
+        rotate4Button.frame = CGRectMake(displayWidth/2 - 60 - 100/2,displayHeight/2 + 210,100,40)
+        rotate4Button.backgroundColor = UIColor(red: 1, green: 0.3, blue: 0.3, alpha: 1)
+        rotate4Button.layer.masksToBounds = true
+        rotate4Button.setTitle("Rotate 4", forState: UIControlState.Normal)
+        rotate4Button.layer.cornerRadius = 20.0
+        rotate4Button.tag = 5
+        rotate4Button.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(rotate4Button)
     }
-    
+
     /*
     接続先のPeripheralを設定
     */
@@ -152,7 +164,7 @@ class Bluetooth3ViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // Cellに値を設定.
         cell.textLabel!.sizeToFit()
-        cell.textLabel!.textColor = UIColor.redColor()
+        cell.textLabel!.textColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
         cell.textLabel!.text = "\(myCharacteristicsUuids[indexPath.row])"
         cell.textLabel!.font = UIFont.systemFontOfSize(16)
         // Cellに値を設定(下).
@@ -173,44 +185,15 @@ class Bluetooth3ViewController: UIViewController, UITableViewDelegate, UITableVi
         print("sender.tag:\(sender.tag)")
         
         if(self.myTargetCharacteristics != nil){
-            if(sender.tag == 1){
-                self.myTargetPeriperal.readValueForCharacteristic(myTargetCharacteristics)
-            }
-            else if(sender.tag == 2){
-                print("write")
-                let data: NSData! = myTextField.text!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion:true)
-                
-                self.myTargetPeriperal.writeValue(data, forCharacteristic: myTargetCharacteristics, type: CBCharacteristicWriteType.WithResponse)
-            }
-        }
-        
-        if(sender.tag == 3){
-            // 遷移するViewを定義する.
-            let myAppViewController: Bluetooth4ViewController = Bluetooth4ViewController()
-            myAppViewController.setPeripheral(self.myTargetPeriperal)
-            myAppViewController.setCharactaristics(self.myCharacteristics)
-            
-            // アニメーションを設定する.
-            myAppViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            
-            print(self.navigationController)
-            // Viewの移動する.
-            self.navigationController?.pushViewController(myAppViewController, animated: true)
+            print("write")
+
+            var data:UInt8 = UInt8(sender.tag)
+            let payload = NSData(bytes: &data, length: 1)
+
+            self.myTargetPeriperal.writeValue(payload, forCharacteristic: myTargetCharacteristics, type: CBCharacteristicWriteType.WithResponse)
         }
     }
-    
-    /*
-    read
-    */
-    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!)
-    {
-        var out: NSInteger = 0
-        
-        characteristic.value!.getBytes(&out, length: sizeof(NSInteger))
-        print(UnicodeScalar(out))
-        myTextField.text = String(UnicodeScalar(out))
-    }
-    
+
     
     /*
     Write
@@ -224,30 +207,4 @@ class Bluetooth3ViewController: UIViewController, UITableViewDelegate, UITableVi
         print("Success")
         
     }
-    
-    /*
-    UITextFieldが編集された直後に呼ばれる.
-    */
-    func textFieldDidBeginEditing(textField: UITextField){
-        print("textFieldDidBeginEditing:" + textField.text!)
-    }
-    
-    /*
-    UITextFieldが編集終了する直前に呼ばれる.
-    */
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        print("textFieldShouldEndEditing:" + textField.text!)
-        
-        return true
-    }
-    
-    /*
-    改行ボタンが押された際に呼ばれる.
-    */
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
-    }
-    
 }
