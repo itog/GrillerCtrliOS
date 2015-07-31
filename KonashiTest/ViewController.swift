@@ -34,10 +34,7 @@ class ViewController: UIViewController {
     func checkKonashi() {
         print("checking if Konashi is connected")
         if Konashi.isReady() {
-            self.statusLabel.text = "Ready";
-            let vc = LedSequencerViewController.new()
-            self.navigationController?.pushViewController(vc, animated: true)
-            connectButton.enabled = true;
+            openSequenceView()
         } else {
             NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkKonashi", userInfo: nil, repeats: false)
         }
@@ -48,28 +45,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClicked(sender: AnyObject) {
-        Konashi.reset()
-        Konashi.find()
-        connectButton.enabled = false;
+        if Konashi.isConnected() {
+            openSequenceView()
+        } else {
+            Konashi.reset()
+            Konashi.find()
+        }
     }
 
     @IBOutlet weak var connectButton: UIButton!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
-
-    @IBAction func button2Clicked(sender: AnyObject) {
-        print("button2Clicked");
-    }
-
-    @IBAction func openSequencerClicked(sender: AnyObject) {
-        let vc = LedSequencerViewController.new()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 
     @IBAction func openButtonClicked(sender: AnyObject) {
-        let bluetoothViewController = Bluetooth1ViewController.new()
-        self.navigationController?.pushViewController(bluetoothViewController, animated: true)
+        openSequenceView()
+    }
+
+    func openSequenceView() {
+        let vc = LedSequencerViewController.new()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     internal func connecting() {
@@ -82,10 +74,6 @@ class ViewController: UIViewController {
 
     internal func ready() {
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "checkKonashi", userInfo: nil, repeats: false)
-    }
-
-    func initPins() {
-        Konashi.pinMode(KonashiDigitalIOPin.LED2, mode: KonashiPinMode.Output)
     }
 }
 

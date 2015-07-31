@@ -17,55 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not ready" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-VO-WDr">
-                                <rect key="frame" x="255" y="119" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdo-U7-t6E">
-                                <rect key="frame" x="256" y="165" width="88" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdo-U7-t6E">
+                                <rect key="frame" x="256" y="285" width="88" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuC-mL-NJX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q3-2L-eqZ">
-                                <rect key="frame" x="277" y="449" width="46" height="30"/>
-                                <state key="normal" title="I2C"/>
-                                <connections>
-                                    <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUU-rU-xuQ"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="BPS-Dt-JGL">
-                                <rect key="frame" x="238" y="286" width="118" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-AD-MCR">
-                                <rect key="frame" x="241" y="323" width="118" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-Aq-aTJ">
-                                <rect key="frame" x="238" y="360" width="118" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vhI-Aq-aTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25N-BJ-IOa"/>
-                            <constraint firstItem="YYk-VO-WDr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="45U-MX-qYb"/>
                             <constraint firstItem="mdo-U7-t6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hM-nY-k3u"/>
-                            <constraint firstItem="BPS-Dt-JGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CR2-E9-JdP"/>
-                            <constraint firstItem="YYk-VO-WDr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYN-K7-zrw"/>
-                            <constraint firstItem="Q67-AD-MCR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tq3-OJ-ZsS"/>
-                            <constraint firstItem="3Q3-2L-eqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFM-uY-728"/>
+                            <constraint firstItem="mdo-U7-t6E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S5E-sy-i0c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ytp-oK-cxk"/>
                     <connections>
-                        <outlet property="blueSlider" destination="vhI-Aq-aTJ" id="3vJ-ha-XFv"/>
                         <outlet property="connectButton" destination="mdo-U7-t6E" id="Wad-6y-7gw"/>
-                        <outlet property="greenSlider" destination="Q67-AD-MCR" id="Io8-51-Hol"/>
-                        <outlet property="redSlider" destination="BPS-Dt-JGL" id="tgx-YL-jrS"/>
-                        <outlet property="statusLabel" destination="YYk-VO-WDr" id="41r-ch-79x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
