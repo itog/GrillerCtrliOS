@@ -1,1 +1,0 @@
-../../../konashi-ios-sdk/Konashi/Konashi/Category/CoreBluetooth/CBPeripheral+Konashi.h

@@ -7,148 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02630DABCCA65C44AD94E99D /* libPods.a */; };
-		514835E91B52179E00776718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514835E81B52179E00776718 /* AppDelegate.swift */; };
-		514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 514835EF1B52179E00776718 /* KonashiTest.xcdatamodeld */; };
-		514835F31B52179E00776718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514835F21B52179E00776718 /* Assets.xcassets */; };
-		514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514835F41B52179E00776718 /* LaunchScreen.storyboard */; };
-		514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514835FF1B521A2900776718 /* CoreBluetooth.framework */; };
-		51BCE9971B53988F004637E1 /* PeripheralListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */; };
-		51BCE99A1B539B46004637E1 /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BCE9981B539B46004637E1 /* Bluetooth.storyboard */; };
-		51BCE9A01B53AD5E004637E1 /* Bluetooth1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */; };
-		51BCE9A21B53ADB4004637E1 /* Bluetooth2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */; };
-		51BCE9A41B53ADF9004637E1 /* Bluetooth3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */; };
-		51BCE9A61B53AE70004637E1 /* Bluetooth4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */; };
+		513DC3B61B6B7BE4001365FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3B51B6B7BE4001365FA /* ViewController.swift */; };
+		513DC3B91B6B7BE4001365FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513DC3B71B6B7BE4001365FA /* Main.storyboard */; };
+		513DC3BB1B6B7BE4001365FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513DC3BA1B6B7BE4001365FA /* Assets.xcassets */; };
+		513DC3BE1B6B7BE4001365FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513DC3BC1B6B7BE4001365FA /* LaunchScreen.storyboard */; };
+		513DC3CA1B6B7C2A001365FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C51B6B7C2A001365FA /* AppDelegate.swift */; };
+		513DC3CB1B6B7C2A001365FA /* Bluetooth1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */; };
+		513DC3CC1B6B7C2A001365FA /* Bluetooth2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */; };
+		513DC3CD1B6B7C2A001365FA /* Bluetooth3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */; };
+		513DC3CE1B6B7C2A001365FA /* Bluetooth4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02630DABCCA65C44AD94E99D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		514835E51B52179E00776718 /* GrillerCtrl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrillerCtrl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		514835E81B52179E00776718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		514835F01B52179E00776718 /* KonashiTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KonashiTest.xcdatamodel; sourceTree = "<group>"; };
-		514835F21B52179E00776718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		514835F51B52179E00776718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		514835F71B52179E00776718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		514835FF1B521A2900776718 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KonashiTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralListTableViewController.swift; sourceTree = "<group>"; };
-		51BCE9991B539B46004637E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Bluetooth.storyboard; sourceTree = "<group>"; };
-		51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth1ViewController.swift; sourceTree = "<group>"; };
-		51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth2ViewController.swift; sourceTree = "<group>"; };
-		51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth3ViewController.swift; sourceTree = "<group>"; };
-		51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth4ViewController.swift; sourceTree = "<group>"; };
-		7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		513DC3B01B6B7BE4001365FA /* GrillerCtrl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrillerCtrl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		513DC3B51B6B7BE4001365FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		513DC3B81B6B7BE4001365FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		513DC3BA1B6B7BE4001365FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		513DC3BD1B6B7BE4001365FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		513DC3BF1B6B7BE4001365FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513DC3C51B6B7C2A001365FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth1ViewController.swift; sourceTree = "<group>"; };
+		513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth2ViewController.swift; sourceTree = "<group>"; };
+		513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth3ViewController.swift; sourceTree = "<group>"; };
+		513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		514835E21B52179E00776718 /* Frameworks */ = {
+		513DC3AD1B6B7BE4001365FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514836001B521A2900776718 /* CoreBluetooth.framework in Frameworks */,
-				470BBD6ACD459559DCDCDCEF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10952D610861CC5E97C84D9B /* Pods */ = {
+		513DC3A71B6B7BE4001365FA = {
 			isa = PBXGroup;
 			children = (
-				838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */,
-				7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		49477B9FA6A81902D2341F8B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				02630DABCCA65C44AD94E99D /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		514835DC1B52179E00776718 = {
-			isa = PBXGroup;
-			children = (
-				514835FF1B521A2900776718 /* CoreBluetooth.framework */,
-				514835E71B52179E00776718 /* GrillerCtrl */,
-				514835E61B52179E00776718 /* Products */,
-				51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */,
-				10952D610861CC5E97C84D9B /* Pods */,
-				49477B9FA6A81902D2341F8B /* Frameworks */,
+				513DC3B21B6B7BE4001365FA /* GrillerCtrl */,
+				513DC3B11B6B7BE4001365FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		514835E61B52179E00776718 /* Products */ = {
+		513DC3B11B6B7BE4001365FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				514835E51B52179E00776718 /* GrillerCtrl.app */,
+				513DC3B01B6B7BE4001365FA /* GrillerCtrl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		514835E71B52179E00776718 /* GrillerCtrl */ = {
+		513DC3B21B6B7BE4001365FA /* GrillerCtrl */ = {
 			isa = PBXGroup;
 			children = (
-				514835E81B52179E00776718 /* AppDelegate.swift */,
-				514835F21B52179E00776718 /* Assets.xcassets */,
-				514835F41B52179E00776718 /* LaunchScreen.storyboard */,
-				514835F71B52179E00776718 /* Info.plist */,
-				514835EF1B52179E00776718 /* KonashiTest.xcdatamodeld */,
-				51BCE9961B53988F004637E1 /* PeripheralListTableViewController.swift */,
-				51BCE9981B539B46004637E1 /* Bluetooth.storyboard */,
-				51BCE99F1B53AD5E004637E1 /* Bluetooth1ViewController.swift */,
-				51BCE9A11B53ADB4004637E1 /* Bluetooth2ViewController.swift */,
-				51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */,
-				51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */,
+				513DC3C51B6B7C2A001365FA /* AppDelegate.swift */,
+				513DC3C61B6B7C2A001365FA /* Bluetooth1ViewController.swift */,
+				513DC3C71B6B7C2A001365FA /* Bluetooth2ViewController.swift */,
+				513DC3C81B6B7C2A001365FA /* Bluetooth3ViewController.swift */,
+				513DC3C91B6B7C2A001365FA /* Bluetooth4ViewController.swift */,
+				513DC3B51B6B7BE4001365FA /* ViewController.swift */,
+				513DC3B71B6B7BE4001365FA /* Main.storyboard */,
+				513DC3BA1B6B7BE4001365FA /* Assets.xcassets */,
+				513DC3BC1B6B7BE4001365FA /* LaunchScreen.storyboard */,
+				513DC3BF1B6B7BE4001365FA /* Info.plist */,
 			);
-			name = GrillerCtrl;
-			path = KonashiTest;
+			path = GrillerCtrl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		514835E41B52179E00776718 /* GrillerCtrl */ = {
+		513DC3AF1B6B7BE4001365FA /* GrillerCtrl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "GrillerCtrl" */;
+			buildConfigurationList = 513DC3C21B6B7BE4001365FA /* Build configuration list for PBXNativeTarget "GrillerCtrl" */;
 			buildPhases = (
-				26F80740A47738F4BB7EE5FB /* Check Pods Manifest.lock */,
-				514835E11B52179E00776718 /* Sources */,
-				514835E21B52179E00776718 /* Frameworks */,
-				514835E31B52179E00776718 /* Resources */,
-				FDD58898AC8590154232E7F4 /* Copy Pods Resources */,
+				513DC3AC1B6B7BE4001365FA /* Sources */,
+				513DC3AD1B6B7BE4001365FA /* Frameworks */,
+				513DC3AE1B6B7BE4001365FA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GrillerCtrl;
-			productName = KonashiTest;
-			productReference = 514835E51B52179E00776718 /* GrillerCtrl.app */;
+			productName = GrillerCtrl;
+			productReference = 513DC3B01B6B7BE4001365FA /* GrillerCtrl.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		514835DD1B52179E00776718 /* Project object */ = {
+		513DC3A81B6B7BE4001365FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = pigmal;
+				ORGANIZATIONNAME = Griller;
 				TargetAttributes = {
-					514835E41B52179E00776718 = {
+					513DC3AF1B6B7BE4001365FA = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = BAZJ9J5XD8;
 					};
 				};
 			};
-			buildConfigurationList = 514835E01B52179E00776718 /* Build configuration list for PBXProject "GrillerCtrl" */;
+			buildConfigurationList = 513DC3AB1B6B7BE4001365FA /* Build configuration list for PBXProject "GrillerCtrl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -156,100 +118,66 @@
 				en,
 				Base,
 			);
-			mainGroup = 514835DC1B52179E00776718;
-			productRefGroup = 514835E61B52179E00776718 /* Products */;
+			mainGroup = 513DC3A71B6B7BE4001365FA;
+			productRefGroup = 513DC3B11B6B7BE4001365FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				514835E41B52179E00776718 /* GrillerCtrl */,
+				513DC3AF1B6B7BE4001365FA /* GrillerCtrl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		514835E31B52179E00776718 /* Resources */ = {
+		513DC3AE1B6B7BE4001365FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514835F61B52179E00776718 /* LaunchScreen.storyboard in Resources */,
-				51BCE99A1B539B46004637E1 /* Bluetooth.storyboard in Resources */,
-				514835F31B52179E00776718 /* Assets.xcassets in Resources */,
+				513DC3BE1B6B7BE4001365FA /* LaunchScreen.storyboard in Resources */,
+				513DC3BB1B6B7BE4001365FA /* Assets.xcassets in Resources */,
+				513DC3B91B6B7BE4001365FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		26F80740A47738F4BB7EE5FB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FDD58898AC8590154232E7F4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		514835E11B52179E00776718 /* Sources */ = {
+		513DC3AC1B6B7BE4001365FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BCE9A61B53AE70004637E1 /* Bluetooth4ViewController.swift in Sources */,
-				514835F11B52179E00776718 /* KonashiTest.xcdatamodeld in Sources */,
-				51BCE9A41B53ADF9004637E1 /* Bluetooth3ViewController.swift in Sources */,
-				51BCE9A01B53AD5E004637E1 /* Bluetooth1ViewController.swift in Sources */,
-				514835E91B52179E00776718 /* AppDelegate.swift in Sources */,
-				51BCE9A21B53ADB4004637E1 /* Bluetooth2ViewController.swift in Sources */,
-				51BCE9971B53988F004637E1 /* PeripheralListTableViewController.swift in Sources */,
+				513DC3CE1B6B7C2A001365FA /* Bluetooth4ViewController.swift in Sources */,
+				513DC3CC1B6B7C2A001365FA /* Bluetooth2ViewController.swift in Sources */,
+				513DC3CB1B6B7C2A001365FA /* Bluetooth1ViewController.swift in Sources */,
+				513DC3CD1B6B7C2A001365FA /* Bluetooth3ViewController.swift in Sources */,
+				513DC3CA1B6B7C2A001365FA /* AppDelegate.swift in Sources */,
+				513DC3B61B6B7BE4001365FA /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		514835F41B52179E00776718 /* LaunchScreen.storyboard */ = {
+		513DC3B71B6B7BE4001365FA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				514835F51B52179E00776718 /* Base */,
+				513DC3B81B6B7BE4001365FA /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		51BCE9981B539B46004637E1 /* Bluetooth.storyboard */ = {
+		513DC3BC1B6B7BE4001365FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				51BCE9991B539B46004637E1 /* Base */,
+				513DC3BD1B6B7BE4001365FA /* Base */,
 			);
-			name = Bluetooth.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		514835F81B52179E00776718 /* Debug */ = {
+		513DC3C01B6B7BE4001365FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		514835F91B52179E00776718 /* Release */ = {
+		513DC3C11B6B7BE4001365FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -330,78 +258,50 @@
 			};
 			name = Release;
 		};
-		514835FB1B52179E00776718 /* Debug */ = {
+		513DC3C31B6B7BE4001365FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 838A893A867C7C74BAFCCA54 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = KonashiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				INFOPLIST_FILE = GrillerCtrl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.GrillerCtrl;
-				PRODUCT_NAME = GrillerCtrl;
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.griller..GrillerCtrl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		514835FC1B52179E00776718 /* Release */ = {
+		513DC3C41B6B7BE4001365FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC5AAB3C5590FD66930885E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = KonashiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				INFOPLIST_FILE = GrillerCtrl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.GrillerCtrl;
-				PRODUCT_NAME = GrillerCtrl;
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.griller..GrillerCtrl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		514835E01B52179E00776718 /* Build configuration list for PBXProject "GrillerCtrl" */ = {
+		513DC3AB1B6B7BE4001365FA /* Build configuration list for PBXProject "GrillerCtrl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				514835F81B52179E00776718 /* Debug */,
-				514835F91B52179E00776718 /* Release */,
+				513DC3C01B6B7BE4001365FA /* Debug */,
+				513DC3C11B6B7BE4001365FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "GrillerCtrl" */ = {
+		513DC3C21B6B7BE4001365FA /* Build configuration list for PBXNativeTarget "GrillerCtrl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				514835FB1B52179E00776718 /* Debug */,
-				514835FC1B52179E00776718 /* Release */,
+				513DC3C31B6B7BE4001365FA /* Debug */,
+				513DC3C41B6B7BE4001365FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		514835EF1B52179E00776718 /* KonashiTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				514835F01B52179E00776718 /* KonashiTest.xcdatamodel */,
-			);
-			currentVersion = 514835F01B52179E00776718 /* KonashiTest.xcdatamodel */;
-			path = KonashiTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 514835DD1B52179E00776718 /* Project object */;
+	rootObject = 513DC3A81B6B7BE4001365FA /* Project object */;
 }
