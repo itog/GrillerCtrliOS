@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		02630DABCCA65C44AD94E99D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		514835E51B52179E00776718 /* KonashiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonashiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		514835E51B52179E00776718 /* GrillerCtrl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrillerCtrl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514835E81B52179E00776718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514835EA1B52179E00776718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		514835ED1B52179E00776718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				514835FF1B521A2900776718 /* CoreBluetooth.framework */,
-				514835E71B52179E00776718 /* KonashiTest */,
+				514835E71B52179E00776718 /* GrillerCtrl */,
 				514835E61B52179E00776718 /* Products */,
 				51AAA1011B52336500642072 /* KonashiTest-Bridging-Header.h */,
 				10952D610861CC5E97C84D9B /* Pods */,
@@ -92,12 +92,12 @@
 		514835E61B52179E00776718 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				514835E51B52179E00776718 /* KonashiTest.app */,
+				514835E51B52179E00776718 /* GrillerCtrl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		514835E71B52179E00776718 /* KonashiTest */ = {
+		514835E71B52179E00776718 /* GrillerCtrl */ = {
 			isa = PBXGroup;
 			children = (
 				51AAA10A1B5347A200642072 /* BluetoothViewController.swift */,
@@ -115,15 +115,16 @@
 				51BCE9A31B53ADF9004637E1 /* Bluetooth3ViewController.swift */,
 				51BCE9A51B53AE70004637E1 /* Bluetooth4ViewController.swift */,
 			);
+			name = GrillerCtrl;
 			path = KonashiTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		514835E41B52179E00776718 /* KonashiTest */ = {
+		514835E41B52179E00776718 /* GrillerCtrl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "KonashiTest" */;
+			buildConfigurationList = 514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "GrillerCtrl" */;
 			buildPhases = (
 				26F80740A47738F4BB7EE5FB /* Check Pods Manifest.lock */,
 				514835E11B52179E00776718 /* Sources */,
@@ -135,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = KonashiTest;
+			name = GrillerCtrl;
 			productName = KonashiTest;
-			productReference = 514835E51B52179E00776718 /* KonashiTest.app */;
+			productReference = 514835E51B52179E00776718 /* GrillerCtrl.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 514835E01B52179E00776718 /* Build configuration list for PBXProject "KonashiTest" */;
+			buildConfigurationList = 514835E01B52179E00776718 /* Build configuration list for PBXProject "GrillerCtrl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -169,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				514835E41B52179E00776718 /* KonashiTest */,
+				514835E41B52179E00776718 /* GrillerCtrl */,
 			);
 		};
 /* End PBXProject section */
@@ -360,8 +361,8 @@
 				INFOPLIST_FILE = KonashiTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.KonashiTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.GrillerCtrl;
+				PRODUCT_NAME = GrillerCtrl;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -379,8 +380,8 @@
 				INFOPLIST_FILE = KonashiTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.KonashiTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pigmal.ios.GrillerCtrl;
+				PRODUCT_NAME = GrillerCtrl;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KonashiTest-Bridging-Header.h";
 			};
@@ -389,7 +390,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		514835E01B52179E00776718 /* Build configuration list for PBXProject "KonashiTest" */ = {
+		514835E01B52179E00776718 /* Build configuration list for PBXProject "GrillerCtrl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				514835F81B52179E00776718 /* Debug */,
@@ -398,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "KonashiTest" */ = {
+		514835FA1B52179E00776718 /* Build configuration list for PBXNativeTarget "GrillerCtrl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				514835FB1B52179E00776718 /* Debug */,
