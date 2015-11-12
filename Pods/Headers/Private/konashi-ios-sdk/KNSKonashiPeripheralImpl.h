@@ -1,1 +1,0 @@
-../../../konashi-ios-sdk/Konashi/Konashi/Impl/KNSKonashiPeripheralImpl.h
